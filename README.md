@@ -1,36 +1,12 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DI UNIDAD 2, ACTIVIDAD 11
+## Ejercicio 1: Actualizar un artículo en el carrito de compras
+Completa la lógica handleIncreaseClick para que al presionar »+» aumente el número correspondiente para cada producto. Código en ShoppingCart.
 
-## Getting Started
+## Ejercicio 2: Eliminar un artículo del carrito de compras
+Este carrito de compras tiene un botón »+» que funciona, pero el botón »–» no hace nada. Debes agregarle un controlador de evento para que al presionarlo disminuya el count del producto correspondiente. Si presionas »–» cuando el conteo es 1, el producto debería eliminarse automáticamente del carrito. Asegúrate de que nunca muestre 0. Código en ShoppingCart2.
 
-First, run the development server:
+## Ejercicio 3: Repara las mutaciones usando métodos que no muten 
+En este ejemplo, todos los controladores de eventos en Ejercicio3.js usan mutación. Como resultado, la edición y eliminación de tareas no funciona. Vuelve a escribir handleAddTodo, handleChangeTodo y handleDeleteTodo para usar los métodos no que no realicen mutaciones:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Ejercicio 4: Arregla las mutaciones usando Immer
+Este es el mismo ejemplo que en el desafío anterior. Esta vez, arregla las mutaciones usando Immer. Para tu comodidad, useImmer ya está importado, por lo que debes cambiar la variable de estado todos para usarlo. Codigo en Ejercicio4.js
