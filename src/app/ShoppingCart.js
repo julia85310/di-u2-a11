@@ -21,7 +21,14 @@ export default function ShoppingCart() {
   ] = useState(initialProducts)
 
   function handleIncreaseClick(productId) {
-
+    setProducts(
+      products.map((producto) => {
+        if(producto.id == productId){
+          return {...producto, count: producto.count + 1}
+        }
+        return producto;
+      })
+    );
   }
 
   return (

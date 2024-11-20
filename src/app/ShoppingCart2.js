@@ -33,6 +33,22 @@ export default function ShoppingCart() {
     }))
   }
 
+  function handleDecreaseClick(productId) {
+    setProducts((prevProducts) => {
+      const updatedProducts = prevProducts.map((product) => {
+        if (product.id === productId) {
+          if (product.count === 1) {
+            return null; ç
+          }
+          return { ...product, count: product.count - 1 };
+        }
+        return product;
+      });
+
+      return updatedProducts.filter((product) => product !== null);
+    });
+  }
+
   return (
     <ul>
       {products.map(product => (
@@ -45,7 +61,7 @@ export default function ShoppingCart() {
           }}>
             +
           </button>
-          <button>
+          <button onClick={() => handleDecreaseClick(product.id)}>
             –
           </button>
         </li>
